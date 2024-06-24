@@ -14,6 +14,10 @@ int main(){
 			cout<<"Saliendo  ..."<<endl;
 			system("pause");
 		break;
+		default:
+			cout<<"Opcion invalida"<<endl;
+			system("pause");
+		break;
 	}
 	return 0;
 }
