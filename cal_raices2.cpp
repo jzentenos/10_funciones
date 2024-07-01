@@ -2,8 +2,10 @@
 #include<cmath>
 #include<stdlib.h>
 using namespace std;
+//Funcion para calcular las raices de una ecuacion cuadratica
 void calcularRaices(float, float, float, float &, float &, bool &, bool &);
 int main(){
+	//Se define las variables a, b y c
 	float a, b, c;
 	cout<<"\tEcuacion Cuadratica: aX^2 + bx + c = 0"<<endl;
 	cout<<"Ingrese el valor de a: "; cin>>a;
@@ -16,9 +18,10 @@ int main(){
 		cout<<"Ingrese el valor de c: "; cin>>c;
 		system("cls");
 		cout<<"Ecuacion: ("<<a<<")x^2 + ("<<b<<")x + ("<<c<<") "<<endl;
+	//Se define las variables a usar en paso de parametro por referencia
 	float x1, x2;
 	bool sr, si;	
-		calcularRaices(a, b, c, x1, x2, sr, si);
+		calcularRaices(a, b, c, x1, x2, sr, si); //Llamado a la funcion
 	//Verificar que tipo de raiz es	
         if(sr){
             if(si){
@@ -44,19 +47,19 @@ int main(){
 void calcularRaices(float a, float b, float c, float &x1, float &x2, bool &sr, bool &si){
 	float d;
 	d= pow(b, 2) - 4*a*c;
-	if(d>0){
+	if(d>0){ //Raices reales y diferentes
 		sr=true;
 		si=false;	
 		x1= ( -b + sqrt(d) ) / (2*a);
 		x2= ( -b - sqrt(d) ) / (2*a);
 	}
-	else if(d==0){
+	else if(d==0){ //Raices reales e iguales
 		sr=true;
 		si=true;
 		x1= ( -b ) / (2*a);
 		x2=x1;	
 	}
-	else{
+	else{ //Raices imaginarias
 		sr=false;
 		si=false;
 	}
