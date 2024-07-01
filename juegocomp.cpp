@@ -12,6 +12,19 @@ void ganador(int user, int comp);
 int main(){
 	srand(time(NULL)); //Valores diferentes en cada ejecucion
 	int user, comp;
+	int cont=0;
+	do{
+		system("cls");
+		cout<<"\tPiedra, Papel o Tijera"<<endl;
+		cout<<"1. Piedra"<<endl;
+		cout<<"2. Papel"<<endl;
+		cout<<"3. Tijera"<<endl;
+		cout<<"Eleccion: "; cin>>user; 	
+		if(user<1 || user>3){
+			cout<<"Opcion INVALIDA"<<endl;
+		}
+		
+	}while(cont<4);
 	return 0;
 }
 void eleccion(int &comp){
