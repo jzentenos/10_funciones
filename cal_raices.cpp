@@ -1,14 +1,24 @@
 #include<iostream>
 #include<cmath>
+#include<stdlib.h>
 using namespace std;
 void Cal_rai(float, float, float);
 int main(){
 	float a, b, c;
 	cout<<"\tEcuacion Cuadratica: aX^2 + bx + c = 0"<<endl;
 	cout<<"Ingrese el valor de a: "; cin>>a;
-	cout<<"Ingrese el valor de b: "; cin>>b;
-	cout<<"Ingrese el valor de c: "; cin>>c,
-	Cal_rai(a, b, c);
+	if(a==0){
+		cout<<"El valor de a no puede ser CERO"<<endl;
+		system("pause");
+	}
+	else{
+		cout<<"Ingrese el valor de b: "; cin>>b;
+		cout<<"Ingrese el valor de c: "; cin>>c;
+		system("cls");
+		cout<<"Ecuacion: ("<<a<<")x^2 + ("<<b<<")x + ("<<c<<") "<<endl;
+		Cal_rai(a, b, c);
+		system("pause");
+	}
 	return 0;
 } 
 void Cal_rai(float a, float b, float c){
